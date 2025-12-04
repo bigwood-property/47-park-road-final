@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.0.1/17227
 // Filename: bigwood_v1.ggsk
-// Generated Thu Dec 4 07:39:04 2025
+// Generated Thu Dec 4 11:11:17 2025
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_hotspot_preview', 2, true);
@@ -3304,7 +3304,7 @@ function pano2vrSkin(player,base) {
 		el.ggId="thumbnail_menu";
 		el.ggDx=0;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
-		el.ggVisible=false;
+		el.ggVisible=true;
 		el.className="ggskin ggskin_scrollarea ";
 		el.ggType='scrollarea';
 		hs ='';
@@ -3380,8 +3380,8 @@ function pano2vrSkin(player,base) {
 					me._thumbnail_menu.ggVisible=true;
 				}
 				else {
-					me._thumbnail_menu.style.visibility="hidden";
-					me._thumbnail_menu.ggVisible=false;
+					me._thumbnail_menu.style.visibility=(Number(me._thumbnail_menu.style.opacity)>0||!me._thumbnail_menu.style.opacity)?'inherit':'hidden';
+					me._thumbnail_menu.ggVisible=true;
 				}
 			}
 		}
@@ -3880,7 +3880,7 @@ function pano2vrSkin(player,base) {
 		el.ggId="thumbnail_menu_mobile";
 		el.ggDx=0;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
-		el.ggVisible=false;
+		el.ggVisible=true;
 		el.className="ggskin ggskin_scrollarea ";
 		el.ggType='scrollarea';
 		hs ='';
@@ -3949,8 +3949,8 @@ function pano2vrSkin(player,base) {
 					me._thumbnail_menu_mobile.ggVisible=true;
 				}
 				else {
-					me._thumbnail_menu_mobile.style.visibility="hidden";
-					me._thumbnail_menu_mobile.ggVisible=false;
+					me._thumbnail_menu_mobile.style.visibility=(Number(me._thumbnail_menu_mobile.style.opacity)>0||!me._thumbnail_menu_mobile.style.opacity)?'inherit':'hidden';
+					me._thumbnail_menu_mobile.ggVisible=true;
 				}
 			}
 		}
@@ -4074,7 +4074,7 @@ function pano2vrSkin(player,base) {
 			}
 		}
 		el=me._thumbnail_cloner_mobile=document.createElement('div');
-		el.ggNumRepeat = 100;
+		el.ggNumRepeat = 1;
 		el.ggWidth = 96;
 		el.ggHeight = 62;
 		el.ggUpdating = false;
@@ -4156,10 +4156,8 @@ function pano2vrSkin(player,base) {
 			var tourNodes = player.getNodeIds();
 			var row = 0;
 			var column = 0;
-			var parentWidth = me._thumbnail_cloner_mobile.parentNode.clientWidth;
-			if (parentWidth == 0) parentWidth = me._thumbnail_cloner_mobile.parentNode.parentNode.clientWidth;
-			var numCols = Math.floor((parentWidth * me._thumbnail_cloner_mobile.ggNumRepeat / 100.0) / me._thumbnail_cloner_mobile.offsetWidth);
-			if (numCols < 1) numCols = 1;
+			var numRows = el.ggNumRepeat;
+			if (numRows < 1) numRows = 1;
 			for (var i=0; i < tourNodes.length; i++) {
 				var nodeId = tourNodes[i];
 				var passed = true;
@@ -4178,10 +4176,10 @@ function pano2vrSkin(player,base) {
 				el.appendChild(inst.__div);
 				inst.__div.ggObj=inst;
 				skin.updateSize(inst.__div);
-				column++;
-				if (column >= numCols) {
-					column = 0;
-					row++;
+				row++;
+				if (row >= numRows) {
+					row = 0;
+					column++;
 				}
 				}
 			}
