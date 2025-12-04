@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.0.1/17227
 // Filename: bigwood_v1.ggsk
-// Generated Thu Dec 4 11:40:13 2025
+// Generated Thu Dec 4 11:57:55 2025
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_hotspot_preview', 2, true);
@@ -3696,11 +3696,11 @@ function pano2vrSkin(player,base) {
 		hs ='';
 		hs+='height : 77px;';
 		hs+='left : 50%;';
-		hs+='margin-left : -59.5px;';
+		hs+='margin-left : -120.5px;';
 		hs+='overflow : visible;';
 		hs+='position : absolute;';
 		hs+='top : 0px;';
-		hs+='width : 119px;';
+		hs+='width : 241px;';
 		hs+="";
 		els.setAttribute('style',hs);
 		me._thumbnail_menu_mobile.ggScrollByX = function(diffX) {
@@ -3878,14 +3878,14 @@ function pano2vrSkin(player,base) {
 		elCornerBg.setAttribute('style', 'position: absolute; right: 0px; bottom: 0px; visibility: hidden; width: 15px; height: 15px; background-color: rgba(255,255,255,1);');
 		elCornerBg.className='ggskin ggskin_scrollarea_scrollcorner';
 		el.ggId="thumbnail_menu_mobile";
-		el.ggDx=0;
+		el.ggDx=2;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_scrollarea ";
 		el.ggType='scrollarea';
 		hs ='';
 		hs+='border : 1px solid rgba(0, 0, 0, 0);';
-		hs+='bottom : 224px;';
+		hs+='bottom : 300px;';
 		hs+='height : 80%;';
 		hs+='left : -10000px;';
 		hs+='opacity : 0;';
@@ -4048,8 +4048,8 @@ function pano2vrSkin(player,base) {
 			}
 		}
 		el=me._thumbnail_cloner_mobile=document.createElement('div');
-		el.ggNumRepeat = 2;
-		el.ggWidth = 96;
+		el.ggNumRepeat = 1;
+		el.ggWidth = 240;
 		el.ggHeight = 62;
 		el.ggUpdating = false;
 		el.ggFilter = [];
@@ -4180,7 +4180,7 @@ function pano2vrSkin(player,base) {
 		hs+='position : absolute;';
 		hs+='top : -10000px;';
 		hs+='visibility : inherit;';
-		hs+='width : 96px;';
+		hs+='width : 240px;';
 		hs+='pointer-events:none;';
 		el.setAttribute('style',hs);
 		el.style[domTransform + 'Origin']='50% 50%';
@@ -13480,7 +13480,7 @@ function pano2vrSkin(player,base) {
 		me.elementMouseDown={};
 		me.elementMouseOver={};
 		me.__div=document.createElement('div');
-		me.__div.setAttribute('style','position: absolute;width: 96px; height: 62px; visibility: inherit; overflow: visible;');
+		me.__div.setAttribute('style','position: absolute;width: 240px; height: 62px; visibility: inherit; overflow: visible;');
 		me.__div.style.left=parameter.left;
 		me.__div.style.top=parameter.top;
 		me.__div.ggIsActive = function() {
