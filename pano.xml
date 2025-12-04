@@ -311,6 +311,7 @@
       <polystyle bordercolor="0x0000ff" backgroundalpha="0.2509803921568627" mode="0" borderalpha="1" backgroundcolor="0x0000ff" handcursor="1"/>
       <hotspot skinid="ht_node" target="" tilt="-9.21" id="Point01" pan="-86.56" description="" title="Kitchen B" url="{node36}"/>
       <hotspot skinid="ht_node" target="" tilt="-6.95" id="Point02" pan="-318.48" description="" title="Front Hallway Ground Floor B" url="{node15}"/>
+      <hotspot skinid="ht_node" target="" tilt="-1.71" id="Point03" pan="-83.62" description="" title="Rear Hallway" url="{node30}"/>
     </hotspots>
     <media/>
     <transition enabled="1" type="crossdissolve" zoomout="0" zoomin="0" zoomoutpause="1" blendcolor="0x000000" zoomfov="20" softedge="0" blendtime="1" zoomspeed="2"/>
