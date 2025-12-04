@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.0.1/17227
 // Filename: bigwood_v1.ggsk
-// Generated Thu Dec 4 12:04:31 2025
+// Generated Thu Dec 4 12:06:35 2025
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_hotspot_preview', 2, true);
@@ -3878,15 +3878,16 @@ function pano2vrSkin(player,base) {
 		elCornerBg.setAttribute('style', 'position: absolute; right: 0px; bottom: 0px; visibility: hidden; width: 15px; height: 15px; background-color: rgba(255,255,255,1);');
 		elCornerBg.className='ggskin ggskin_scrollarea_scrollcorner';
 		el.ggId="thumbnail_menu_mobile";
+		el.ggDx=0;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_scrollarea ";
 		el.ggType='scrollarea';
 		hs ='';
 		hs+='border : 1px solid rgba(0, 0, 0, 0);';
-		hs+='bottom : 20px;';
+		hs+='bottom : 200px;';
 		hs+='height : 80%;';
-		hs+='left : 54px;';
+		hs+='left : -10000px;';
 		hs+='opacity : 0;';
 		hs+='overflow : hidden;';
 		hs+='position : absolute;';
@@ -3955,6 +3956,17 @@ function pano2vrSkin(player,base) {
 			}
 		}
 		me._thumbnail_menu_mobile.ggUpdatePosition=function (useTransition) {
+			if (useTransition==='undefined') {
+				useTransition = false;
+			}
+			if (!useTransition) {
+				this.style[domTransition]='none';
+			}
+			if (this.parentNode) {
+				var pw=this.parentNode.clientWidth;
+				var w=this.offsetWidth;
+					this.style.left=(this.ggDx + pw/2 - w/2) + 'px';
+			}
 			{
 				this.ggContent.style.left = '0px';
 				this.ggContent.style.top = '0px';
