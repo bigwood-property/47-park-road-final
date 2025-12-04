@@ -280,7 +280,7 @@
       <hotspot target="" title="Room 4" description="" url="{node2}" skinid="ht_node" tilt="-9.34" pan="-74.92" id="Point01"/>
       <hotspot target="" title="Front Hallway 1st Floor B " description="" url="{node5}" skinid="ht_node" tilt="-30.93" pan="-140.43" id="Point02"/>
       <hotspot target="" title="Room 7" description="" url="{node8}" skinid="ht_node" tilt="-2.97" pan="-260.38" id="Point03"/>
-      <hotspot target="" title="Room 6 A" description="" url="{node9}" skinid="ht_node" tilt="-3.16" pan="-154.13" id="Point04"/>
+      <hotspot target="" title="Room 6 front" description="" url="{node9}" skinid="ht_node" tilt="-3.16" pan="-154.13" id="Point04"/>
       <hotspot target="" title="Room 5" description="" url="{node4}" skinid="ht_node" tilt="-3.75" pan="-144.27" id="Point05"/>
       <hotspot target="" title="Front Hallway Ground Floor A" description="" url="{node16}" skinid="ht_node" tilt="-42.81" pan="-169.95" id="Point06"/>
     </hotspots>
@@ -478,7 +478,7 @@
       <label border="1" backgroundalpha="1" textcolor="0x000000" textalpha="1" height="20" width="180" borderradius="1" wordwrap="1" background="1" bordercolor="0x000000" enabled="1" backgroundcolor="0xffffff" borderalpha="1"/>
       <polystyle backgroundalpha="0.2509803921568627" bordercolor="0x0000ff" handcursor="1" backgroundcolor="0x0000ff" mode="0" borderalpha="1"/>
       <hotspot target="" title="Room 5" description="" url="{node4}" skinid="ht_node" tilt="-12.98" pan="-87.75" id="Point01"/>
-      <hotspot target="" title="Room 6 A" description="" url="{node9}" skinid="ht_node" tilt="-2.99" pan="-172.63" id="Point02"/>
+      <hotspot target="" title="Room 6 front" description="" url="{node9}" skinid="ht_node" tilt="-2.99" pan="-172.63" id="Point02"/>
       <hotspot target="" title="Front Hallway 1st Floor A" description="" url="{node6}" skinid="ht_node" tilt="-9.18" pan="-352.26" id="Point03"/>
     </hotspots>
     <media/>
@@ -555,13 +555,13 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="270" tilt="90" fovfisheye="360" fov="120" scaletofit="1" pan="360"/>
     </view>
-    <userdata title="Room 6 A" description="" copyright="" longitude="-0.593361" datetime="16/09/2025 13:57" info="" author="" tags="Raw files" comment="" source="" latitude="52.287222" customnodeid="">
+    <userdata title="Room 6 front" description="" copyright="" longitude="-0.593361" datetime="16/09/2025 13:57" info="" author="" tags="Raw files" comment="" source="" latitude="52.287222" customnodeid="">
       <mapcoords y_floorplan_percent="11.01169993117688" x_floorplan_percent="67.50388399792854" mapid="FloorPlan01" x="1.89854673744174" y="-0.2330398757120663"/>
     </userdata>
     <hotspots height="20" width="180" wordwrap="1">
       <label border="1" backgroundalpha="1" textcolor="0x000000" textalpha="1" height="20" width="180" borderradius="1" wordwrap="1" background="1" bordercolor="0x000000" enabled="1" backgroundcolor="0xffffff" borderalpha="1"/>
       <polystyle backgroundalpha="0.2509803921568627" bordercolor="0x0000ff" handcursor="1" backgroundcolor="0x0000ff" mode="0" borderalpha="1"/>
-      <hotspot target="" title="Room 6 B" description="" url="{node11}" skinid="ht_node" tilt="-10.35" pan="-178.29" id="Point01"/>
+      <hotspot target="" title="Room 6" description="" url="{node11}" skinid="ht_node" tilt="-10.35" pan="-178.29" id="Point01"/>
       <hotspot target="" title="Front Hallway 1st Floor B " description="" url="{node5}" skinid="ht_node" tilt="-11.02" pan="-309.33" id="Point02"/>
     </hotspots>
     <media/>
@@ -583,14 +583,14 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="270" tilt="90" fovfisheye="360" fov="120" scaletofit="1" pan="360"/>
     </view>
-    <userdata title="Room 6 B" description="" copyright="" longitude="-0.593361" datetime="16/09/2025 13:56" info="" author="" tags="Raw files|showthumb" comment="" source="" latitude="52.287250" customnodeid="">
+    <userdata title="Room 6" description="" copyright="" longitude="-0.593361" datetime="16/09/2025 13:56" info="" author="" tags="Raw files|showthumb" comment="" source="" latitude="52.287250" customnodeid="">
       <mapcoords y_floorplan_percent="13.07639366827254" x_floorplan_percent="78.37907819782495" mapid="FloorPlan01" x="2.204411574313827" y="-0.2767348524080787"/>
     </userdata>
     <hotspots height="20" width="180" wordwrap="1">
       <label border="1" backgroundalpha="1" textcolor="0x000000" textalpha="1" height="20" width="180" borderradius="1" wordwrap="1" background="1" bordercolor="0x000000" enabled="1" backgroundcolor="0xffffff" borderalpha="1"/>
       <polystyle backgroundalpha="0.2509803921568627" bordercolor="0x0000ff" handcursor="1" backgroundcolor="0x0000ff" mode="0" borderalpha="1"/>
       <hotspot target="" title="Room 6 Bathroom" description="" url="{node10}" skinid="ht_node" tilt="-11.96" pan="-164.58" id="Point01"/>
-      <hotspot target="" title="Room 6 A" description="" url="{node9}" skinid="ht_node" tilt="-11.49" pan="-191.9" id="Point02"/>
+      <hotspot target="" title="Room 6 front" description="" url="{node9}" skinid="ht_node" tilt="-11.49" pan="-191.9" id="Point02"/>
     </hotspots>
     <media/>
     <transition zoomout="0" softedge="0" blendcolor="0x000000" zoomin="0" enabled="1" zoomoutpause="1" type="crossdissolve" blendtime="1" zoomspeed="2" zoomfov="20"/>
@@ -617,7 +617,7 @@
     <hotspots height="20" width="180" wordwrap="1">
       <label border="1" backgroundalpha="1" textcolor="0x000000" textalpha="1" height="20" width="180" borderradius="1" wordwrap="1" background="1" bordercolor="0x000000" enabled="1" backgroundcolor="0xffffff" borderalpha="1"/>
       <polystyle backgroundalpha="0.2509803921568627" bordercolor="0x0000ff" handcursor="1" backgroundcolor="0x0000ff" mode="0" borderalpha="1"/>
-      <hotspot target="" title="Room 6 B" description="" url="{node11}" skinid="ht_node" tilt="-26.22" pan="-193.89" id="Point01"/>
+      <hotspot target="" title="Room 6" description="" url="{node11}" skinid="ht_node" tilt="-26.22" pan="-193.89" id="Point01"/>
     </hotspots>
     <media/>
     <transition zoomout="0" softedge="0" blendcolor="0x000000" zoomin="0" enabled="1" zoomoutpause="1" type="crossdissolve" blendtime="1" zoomspeed="2" zoomfov="20"/>
