@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.0.1/17227
 // Filename: bigwood_v1.ggsk
-// Generated Thu May 7 11:17:39 2026
+// Generated Thu May 7 11:26:25 2026
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_hotspot_preview', 2, true);
@@ -3838,13 +3838,13 @@ function pano2vrSkin(player,base) {
 		el.ggContentLeftOffset = 0;
 		el.ggContentTopOffset = 0;
 		hs ='';
-		hs+='height : 532px;';
+		hs+='height : 95px;';
 		hs+='left : 50%;';
-		hs+='margin-left : -356.9px;';
+		hs+='margin-left : -59.5px;';
 		hs+='overflow : visible;';
 		hs+='position : absolute;';
 		hs+='top : 0px;';
-		hs+='width : 713.8px;';
+		hs+='width : 119px;';
 		hs+="";
 		els.setAttribute('style',hs);
 		me._thumbnail_menu_mobile.ggScrollByX = function(diffX) {
@@ -4217,7 +4217,7 @@ function pano2vrSkin(player,base) {
 		}
 		el=me._thumbnail_cloner_mobile=document.createElement('div');
 		el.ggNumRepeat = 1;
-		el.ggWidth = 712.8;
+		el.ggWidth = 90;
 		el.ggHeight = 62;
 		el.ggUpdating = false;
 		el.ggFilter = [];
@@ -4336,19 +4336,18 @@ function pano2vrSkin(player,base) {
 		el.ggFilter = [];
 		el.ggFilter[0] = "showthumb";
 		el.ggId="thumbnail_cloner_mobile";
-		el.ggDy=20;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_cloner ";
 		el.ggType='cloner';
 		hs ='';
 		hs+='height : 62px;';
-		hs+='left : 2px;';
+		hs+='left : 5px;';
 		hs+='overflow : visible;';
 		hs+='position : absolute;';
-		hs+='top : -10000px;';
+		hs+='top : 20px;';
 		hs+='visibility : inherit;';
-		hs+='width : 80%;';
+		hs+='width : 90px;';
 		hs+='pointer-events:none;';
 		el.setAttribute('style',hs);
 		el.style[domTransform + 'Origin']='50% 50%';
@@ -4393,17 +4392,6 @@ function pano2vrSkin(player,base) {
 			}
 		}
 		me._thumbnail_cloner_mobile.ggUpdatePosition=function (useTransition) {
-			if (useTransition==='undefined') {
-				useTransition = false;
-			}
-			if (!useTransition) {
-				this.style[domTransition]='none';
-			}
-			if (this.parentNode) {
-				var ph=this.parentNode.clientHeight;
-				var h=this.offsetHeight;
-					this.style.top=(this.ggDy + ph/2 - h/2) + 'px';
-			}
 			var w=player.getViewerSize().width;
 			var h=player.getViewerSize().height
 			if ((!me._thumbnail_cloner_mobile.ggLastSize) || (me._thumbnail_cloner_mobile.ggLastSize.w!=w) || (me._thumbnail_cloner_mobile.ggLastSize.h!=h)) {
@@ -13697,7 +13685,7 @@ function pano2vrSkin(player,base) {
 		me.elementMouseDown={};
 		me.elementMouseOver={};
 		me.__div=document.createElement('div');
-		me.__div.setAttribute('style','position: absolute;width: 712.8px; height: 62px; visibility: inherit; overflow: visible;');
+		me.__div.setAttribute('style','position: absolute;width: 90px; height: 62px; visibility: inherit; overflow: visible;');
 		me.__div.style.left=parameter.left;
 		me.__div.style.top=parameter.top;
 		me.__div.ggIsActive = function() {
