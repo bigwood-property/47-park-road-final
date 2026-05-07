@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.0.1/17227
 // Filename: bigwood_v1.ggsk
-// Generated Thu May 7 11:12:38 2026
+// Generated Thu May 7 11:17:39 2026
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_hotspot_preview', 2, true);
@@ -3840,11 +3840,11 @@ function pano2vrSkin(player,base) {
 		hs ='';
 		hs+='height : 532px;';
 		hs+='left : 50%;';
-		hs+='margin-left : -330.9px;';
+		hs+='margin-left : -356.9px;';
 		hs+='overflow : visible;';
 		hs+='position : absolute;';
 		hs+='top : 0px;';
-		hs+='width : 661.8px;';
+		hs+='width : 713.8px;';
 		hs+="";
 		els.setAttribute('style',hs);
 		me._thumbnail_menu_mobile.ggScrollByX = function(diffX) {
@@ -4022,19 +4022,19 @@ function pano2vrSkin(player,base) {
 		elCornerBg.setAttribute('style', 'position: absolute; right: 0px; bottom: 0px; visibility: hidden; width: 15px; height: 15px; background-color: rgba(255,255,255,1);');
 		elCornerBg.className='ggskin ggskin_scrollarea_scrollcorner';
 		el.ggId="thumbnail_menu_mobile";
-		el.ggDx=0;
+		el.ggDy=400;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=false;
 		el.className="ggskin ggskin_scrollarea ";
 		el.ggType='scrollarea';
 		hs ='';
 		hs+='border : 1px solid rgba(0, 0, 0, 0);';
-		hs+='bottom : 224px;';
 		hs+='height : 80%;';
-		hs+='left : -10000px;';
+		hs+='left : 0px;';
 		hs+='opacity : 0;';
 		hs+='overflow : hidden;';
 		hs+='position : absolute;';
+		hs+='top : -10000px;';
 		hs+='visibility : hidden;';
 		hs+='width : 90%;';
 		hs+='pointer-events:none;';
@@ -4059,15 +4059,15 @@ function pano2vrSkin(player,base) {
 			}
 			if (me._thumbnail_menu_mobile.ggCurrentLogicStatePosition != newLogicStatePosition) {
 				me._thumbnail_menu_mobile.ggCurrentLogicStatePosition = newLogicStatePosition;
-				me._thumbnail_menu_mobile.style[domTransition]='left 0s, bottom 0s, opacity 500ms ease 0ms, visibility 500ms ease 0ms';
+				me._thumbnail_menu_mobile.style[domTransition]='left 0s, top 0s, opacity 500ms ease 0ms, visibility 500ms ease 0ms';
 				if (me._thumbnail_menu_mobile.ggCurrentLogicStatePosition == 0) {
-					this.ggDx = 0;
-					me._thumbnail_menu_mobile.style.bottom='1000px';
+					me._thumbnail_menu_mobile.style.left='0px';
+					this.ggDy = 1000;
 					me._thumbnail_menu_mobile.ggUpdatePosition(true);
 				}
 				else {
-					me._thumbnail_menu_mobile.ggDx=0;
-					me._thumbnail_menu_mobile.style.bottom='224px';
+					me._thumbnail_menu_mobile.style.left='0px';
+					me._thumbnail_menu_mobile.ggDy=400;
 					me._thumbnail_menu_mobile.ggUpdatePosition(true);
 				}
 			}
@@ -4087,7 +4087,7 @@ function pano2vrSkin(player,base) {
 			}
 			if (me._thumbnail_menu_mobile.ggCurrentLogicStateVisible != newLogicStateVisible) {
 				me._thumbnail_menu_mobile.ggCurrentLogicStateVisible = newLogicStateVisible;
-				me._thumbnail_menu_mobile.style[domTransition]='left 0s, bottom 0s, opacity 500ms ease 0ms, visibility 500ms ease 0ms';
+				me._thumbnail_menu_mobile.style[domTransition]='left 0s, top 0s, opacity 500ms ease 0ms, visibility 500ms ease 0ms';
 				if (me._thumbnail_menu_mobile.ggCurrentLogicStateVisible == 0) {
 					me._thumbnail_menu_mobile.style.visibility=(Number(me._thumbnail_menu_mobile.style.opacity)>0||!me._thumbnail_menu_mobile.style.opacity)?'inherit':'hidden';
 					me._thumbnail_menu_mobile.ggVisible=true;
@@ -4112,7 +4112,7 @@ function pano2vrSkin(player,base) {
 			}
 			if (me._thumbnail_menu_mobile.ggCurrentLogicStateAlpha != newLogicStateAlpha) {
 				me._thumbnail_menu_mobile.ggCurrentLogicStateAlpha = newLogicStateAlpha;
-				me._thumbnail_menu_mobile.style[domTransition]='left 0s, bottom 0s, opacity 500ms ease 0ms, visibility 500ms ease 0ms';
+				me._thumbnail_menu_mobile.style[domTransition]='left 0s, top 0s, opacity 500ms ease 0ms, visibility 500ms ease 0ms';
 				if (me._thumbnail_menu_mobile.ggCurrentLogicStateAlpha == 0) {
 					me._thumbnail_menu_mobile.style.visibility=me._thumbnail_menu_mobile.ggVisible?'inherit':'hidden';
 					me._thumbnail_menu_mobile.style.opacity=1;
@@ -4131,9 +4131,9 @@ function pano2vrSkin(player,base) {
 				this.style[domTransition]='none';
 			}
 			if (this.parentNode) {
-				var pw=this.parentNode.clientWidth;
-				var w=this.offsetWidth;
-					this.style.left=(this.ggDx + pw/2 - w/2) + 'px';
+				var ph=this.parentNode.clientHeight;
+				var h=this.offsetHeight;
+					this.style.top=(this.ggDy + ph/2 - h/2) + 'px';
 			}
 			{
 				this.ggContent.style.left = '0px';
@@ -4343,7 +4343,7 @@ function pano2vrSkin(player,base) {
 		el.ggType='cloner';
 		hs ='';
 		hs+='height : 62px;';
-		hs+='left : -50px;';
+		hs+='left : 2px;';
 		hs+='overflow : visible;';
 		hs+='position : absolute;';
 		hs+='top : -10000px;';
