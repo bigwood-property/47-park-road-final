@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.0.1/17227
 // Filename: bigwood_v1.ggsk
-// Generated Thu May 7 13:12:10 2026
+// Generated Thu May 7 13:25:20 2026
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_hotspot_preview', 2, true);
@@ -4021,7 +4021,7 @@ function pano2vrSkin(player,base) {
 		elCornerBg.setAttribute('style', 'position: absolute; right: 0px; bottom: 0px; visibility: hidden; width: 15px; height: 15px; background-color: rgba(255,255,255,1);');
 		elCornerBg.className='ggskin ggskin_scrollarea_scrollcorner';
 		el.ggId="thumbnail_menu_mobile";
-		el.ggDy=80;
+		el.ggDy=40;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=false;
 		el.className="ggskin ggskin_scrollarea ";
@@ -4066,7 +4066,7 @@ function pano2vrSkin(player,base) {
 				}
 				else {
 					me._thumbnail_menu_mobile.style.left='0px';
-					me._thumbnail_menu_mobile.ggDy=80;
+					me._thumbnail_menu_mobile.ggDy=40;
 					me._thumbnail_menu_mobile.ggUpdatePosition(true);
 				}
 			}
@@ -4260,6 +4260,16 @@ function pano2vrSkin(player,base) {
 				}
 			}
 		}
+		me._thumbnail_cloner_mobile.callChildLogicBlocks_varchanged_vis_thumbnail_menu_mobile = function(){
+			if(me._thumbnail_cloner_mobile.ggInstances) {
+				var i;
+				for(i = 0; i < me._thumbnail_cloner_mobile.ggInstances.length; i++) {
+					if (me._thumbnail_cloner_mobile.ggInstances[i]._thumbnail_title_mobile && me._thumbnail_cloner_mobile.ggInstances[i]._thumbnail_title_mobile.logicBlock_alpha) {
+						me._thumbnail_cloner_mobile.ggInstances[i]._thumbnail_title_mobile.logicBlock_alpha();
+					}
+				}
+			}
+		}
 		me._thumbnail_cloner_mobile.callChildLogicBlocks_varchanged_opt_thumbnail_tooltip = function(){
 			if(me._thumbnail_cloner_mobile.ggInstances) {
 				var i;
@@ -4321,6 +4331,7 @@ function pano2vrSkin(player,base) {
 			me._thumbnail_cloner_mobile.callChildLogicBlocks_mouseover();
 			me._thumbnail_cloner_mobile.callChildLogicBlocks_mouseover();
 			me._thumbnail_cloner_mobile.callChildLogicBlocks_active();
+			me._thumbnail_cloner_mobile.callChildLogicBlocks_varchanged_vis_thumbnail_menu_mobile();
 			me._thumbnail_cloner_mobile.callChildLogicBlocks_varchanged_opt_thumbnail_tooltip();
 			me._thumbnail_cloner_mobile.ggUpdating = false;
 			player.triggerEvent('clonerchanged');
@@ -13964,6 +13975,12 @@ function pano2vrSkin(player,base) {
 			{
 				newLogicStateAlpha = 0;
 			}
+			else if (
+				(player.getVariableValue('vis_thumbnail_menu_mobile') == true)
+			)
+			{
+				newLogicStateAlpha = 1;
+			}
 			else {
 				newLogicStateAlpha = -1;
 			}
@@ -13971,6 +13988,10 @@ function pano2vrSkin(player,base) {
 				me._thumbnail_title_mobile.ggCurrentLogicStateAlpha = newLogicStateAlpha;
 				me._thumbnail_title_mobile.style[domTransition]='opacity 500ms ease 0ms, visibility 500ms ease 0ms';
 				if (me._thumbnail_title_mobile.ggCurrentLogicStateAlpha == 0) {
+					me._thumbnail_title_mobile.style.visibility=me._thumbnail_title_mobile.ggVisible?'inherit':'hidden';
+					me._thumbnail_title_mobile.style.opacity=1;
+				}
+				else if (me._thumbnail_title_mobile.ggCurrentLogicStateAlpha == 1) {
 					me._thumbnail_title_mobile.style.visibility=me._thumbnail_title_mobile.ggVisible?'inherit':'hidden';
 					me._thumbnail_title_mobile.style.opacity=1;
 				}
@@ -14108,6 +14129,7 @@ function pano2vrSkin(player,base) {
 	player.addListener('mouseover', function(args) { me._thumbnail_cloner.callChildLogicBlocks_mouseover();me._thumbnail_cloner_mobile.callChildLogicBlocks_mouseover(); });
 	player.addListener('mouseover', function(args) { me._thumbnail_cloner_mobile.callChildLogicBlocks_mouseover(); });
 	player.addListener('changenodeid', function(args) { me._thumbnail_cloner.callChildLogicBlocks_active();me._thumbnail_cloner_mobile.callChildLogicBlocks_active(); });
+	player.addListener('varchanged_vis_thumbnail_menu_mobile', function(args) { me._thumbnail_cloner_mobile.callChildLogicBlocks_varchanged_vis_thumbnail_menu_mobile(); });
 	player.addListener('varchanged_opt_thumbnail_tooltip', function(args) { me._thumbnail_cloner.callChildLogicBlocks_varchanged_opt_thumbnail_tooltip();me._thumbnail_cloner_mobile.callChildLogicBlocks_varchanged_opt_thumbnail_tooltip(); });
 	player.addListener('changenodeid', function(args) { me.callChildLogicBlocksHotspot_ht_node_changenodeid();me.callChildLogicBlocksHotspot_ht_url_changenodeid();me.callChildLogicBlocksHotspot_ht_info_changenodeid();me.callChildLogicBlocksHotspot_ht_image_changenodeid();me.callChildLogicBlocksHotspot_ht_video_file_changenodeid();me.callChildLogicBlocksHotspot_ht_video_url_changenodeid();me.callChildLogicBlocksHotspot_ht_video_vimeo_changenodeid();me.callChildLogicBlocksHotspot_ht_video_youtube_changenodeid(); });
 	player.addListener('configloaded', function(args) { me.callChildLogicBlocksHotspot_ht_node_configloaded();me.callChildLogicBlocksHotspot_ht_url_configloaded();me.callChildLogicBlocksHotspot_ht_info_configloaded();me.callChildLogicBlocksHotspot_ht_image_configloaded();me.callChildLogicBlocksHotspot_ht_video_file_configloaded();me.callChildLogicBlocksHotspot_ht_video_url_configloaded();me.callChildLogicBlocksHotspot_ht_video_vimeo_configloaded();me.callChildLogicBlocksHotspot_ht_video_youtube_configloaded(); });
