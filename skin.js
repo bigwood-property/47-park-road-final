@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.0.1/17227
 // Filename: bigwood_v1.ggsk
-// Generated Thu May 7 14:10:31 2026
+// Generated Thu May 7 14:34:29 2026
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_hotspot_preview', 2, true);
@@ -3838,7 +3838,7 @@ function pano2vrSkin(player,base) {
 		el.ggContentLeftOffset = 0;
 		el.ggContentTopOffset = 0;
 		hs ='';
-		hs+='height : 647px;';
+		hs+='height : 699px;';
 		hs+='left : 0px;';
 		hs+='overflow : visible;';
 		hs+='position : absolute;';
@@ -4210,7 +4210,7 @@ function pano2vrSkin(player,base) {
 		el=me._thumbnail_cloner_mobile=document.createElement('div');
 		el.ggNumRepeat = 1;
 		el.ggWidth = 125;
-		el.ggHeight = 648;
+		el.ggHeight = 700;
 		el.ggUpdating = false;
 		el.ggFilter = [];
 		el.ggInstances = [];
@@ -4344,7 +4344,7 @@ function pano2vrSkin(player,base) {
 		el.className="ggskin ggskin_cloner ";
 		el.ggType='cloner';
 		hs ='';
-		hs+='height : 648px;';
+		hs+='height : 700px;';
 		hs+='left : 5px;';
 		hs+='overflow : visible;';
 		hs+='position : absolute;';
@@ -13688,7 +13688,7 @@ function pano2vrSkin(player,base) {
 		me.elementMouseDown={};
 		me.elementMouseOver={};
 		me.__div=document.createElement('div');
-		me.__div.setAttribute('style','position: absolute;width: 125px; height: 648px; visibility: inherit; overflow: visible;');
+		me.__div.setAttribute('style','position: absolute;width: 125px; height: 700px; visibility: inherit; overflow: visible;');
 		me.__div.style.left=parameter.left;
 		me.__div.style.top=parameter.top;
 		me.__div.ggIsActive = function() {
