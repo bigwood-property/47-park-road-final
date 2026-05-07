@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.0.1/17227
 // Filename: bigwood_v1.ggsk
-// Generated Thu May 7 09:01:06 2026
+// Generated Thu May 7 09:10:42 2026
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_hotspot_preview', 2, true);
@@ -8289,8 +8289,8 @@ function pano2vrSkin(player,base) {
 				activeNodeLatLng = L.latLng(0,0);
 			}
 			if (mapType == 'web') {
-				if (me._floorplan.ggLastZoom == -1) me._floorplan.ggLastZoom = 14;
-				var initZoom = keepZoom ? me._floorplan.ggLastZoom : 14;
+				if (me._floorplan.ggLastZoom == -1) me._floorplan.ggLastZoom = 1;
+				var initZoom = keepZoom ? me._floorplan.ggLastZoom : 1;
 				var mapOptions = {
 					zoom: initZoom,
 					zoomControl: true,
@@ -8317,7 +8317,7 @@ function pano2vrSkin(player,base) {
 				}
 			} else if (mapType == 'file') {
 				if (me._floorplan.ggLastZoom == -1) me._floorplan.ggLastZoom = 7;
-				var initZoom = keepZoom ? me._floorplan.ggLastZoom : 7;
+				var initZoom = keepZoom ? me._floorplan.ggLastZoom : 8;
 				var mapOptions = {
 					zoom: initZoom,
 					minZoom: 7,
@@ -8378,14 +8378,30 @@ function pano2vrSkin(player,base) {
 		me._floorplan.ggFitBounds=function(force) {
 			if (me._floorplan.ggMarkerBounds.isValid()) {
 				if (me._floorplan.ggMarkerInstances.length > 1 || Object.getOwnPropertyNames(me._floorplan.ggGoogleMarkerArray).length > 1) {
+					if (force) {
 					me._floorplan.ggMap.zoomOut(1, {animate: false});
 					me._floorplan.ggMap.fitBounds(me._floorplan.ggMarkerBounds, {padding: [30, 30], animate: false});
+					} else {
+						if (player.getMapType(me._floorplan.ggMapId) == 'web') {
+							me._floorplan.ggMap.setZoom(1);
+						} else {
+							me._floorplan.ggMap.setZoom(7 + 1);
+						}
+					}
 				} else {
 					me._floorplan.ggMap.setView(me._floorplan.ggMarkerBounds.getCenter(), me._floorplan.ggMap.getZoom());
 					if (player.getMapType(me._floorplan.ggMapId) == 'web') {
+						if (force) {
 						me._floorplan.ggMap.setZoom(18);
+						} else {
+							me._floorplan.ggMap.setZoom(1);
+						}
 					} else {
+						if (force) {
 						me._floorplan.ggMap.setZoom(7);
+						} else {
+							me._floorplan.ggMap.setZoom(7 + 1);
+						}
 					}
 				}
 			}
