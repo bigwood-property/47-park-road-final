@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.0.1/17227
 // Filename: bigwood_v1.ggsk
-// Generated Thu May 7 11:32:00 2026
+// Generated Thu May 7 11:35:15 2026
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_hotspot_preview', 2, true);
@@ -3839,8 +3839,7 @@ function pano2vrSkin(player,base) {
 		el.ggContentTopOffset = 0;
 		hs ='';
 		hs+='height : 599px;';
-		hs+='left : 50%;';
-		hs+='margin-left : -59.5px;';
+		hs+='left : 0px;';
 		hs+='overflow : visible;';
 		hs+='position : absolute;';
 		hs+='top : 0px;';
@@ -4170,15 +4169,8 @@ function pano2vrSkin(player,base) {
 				var contentHeight = maxY - minY;
 				this.ggContent.style.left = this.ggContentLeftOffset + 'px';
 				this.ggContent.style.top = this.ggContentTopOffset + 'px';
-				var containerWidth = this.clientWidth;
-				if (contentWidth < containerWidth) {
-					this.ggContent.style.left = '50%';
-					this.ggContent.style.marginLeft = (contentWidth/-2) + 'px';
-				}
-				else {
-					this.ggContent.style.left = this.ggContentLeftOffset + 'px';
-					this.ggContent.style.marginLeft = '0px';
-				}
+				this.ggContent.style.left = this.ggContentLeftOffset + 'px';
+				this.ggContent.style.marginLeft = '0px';
 				this.ggContent.style.top = -(Math.round(me._thumbnail_menu_mobile.ggScrollPosY / me._thumbnail_menu_mobile.ggVPercentVisible)) + this.ggContentTopOffset + 'px';
 				this.ggContent.style.marginTop = '0px';
 				if ((me._thumbnail_menu_mobile.ggHorScrollVisible && contentHeight > this.clientHeight - 15) || (!me._thumbnail_menu_mobile.ggHorScrollVisible && contentHeight > this.clientHeight)) {
