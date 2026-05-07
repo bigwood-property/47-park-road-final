@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.0.1/17227
 // Filename: bigwood_v1.ggsk
-// Generated Thu May 7 11:01:27 2026
+// Generated Thu May 7 11:12:38 2026
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_hotspot_preview', 2, true);
@@ -3840,11 +3840,11 @@ function pano2vrSkin(player,base) {
 		hs ='';
 		hs+='height : 532px;';
 		hs+='left : 50%;';
-		hs+='margin-left : -356.9px;';
+		hs+='margin-left : -330.9px;';
 		hs+='overflow : visible;';
 		hs+='position : absolute;';
 		hs+='top : 0px;';
-		hs+='width : 713.8px;';
+		hs+='width : 661.8px;';
 		hs+="";
 		els.setAttribute('style',hs);
 		me._thumbnail_menu_mobile.ggScrollByX = function(diffX) {
@@ -4343,7 +4343,7 @@ function pano2vrSkin(player,base) {
 		el.ggType='cloner';
 		hs ='';
 		hs+='height : 62px;';
-		hs+='left : 2px;';
+		hs+='left : -50px;';
 		hs+='overflow : visible;';
 		hs+='position : absolute;';
 		hs+='top : -10000px;';
