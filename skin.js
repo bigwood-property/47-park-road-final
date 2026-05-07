@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.0.1/17227
 // Filename: bigwood_v1.ggsk
-// Generated Thu May 7 10:46:49 2026
+// Generated Thu May 7 10:54:04 2026
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_hotspot_preview', 2, true);
@@ -4024,7 +4024,7 @@ function pano2vrSkin(player,base) {
 		el.ggId="thumbnail_menu_mobile";
 		el.ggDx=0;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
-		el.ggVisible=true;
+		el.ggVisible=false;
 		el.className="ggskin ggskin_scrollarea ";
 		el.ggType='scrollarea';
 		hs ='';
@@ -4034,7 +4034,7 @@ function pano2vrSkin(player,base) {
 		hs+='left : -10000px;';
 		hs+='overflow : hidden;';
 		hs+='position : absolute;';
-		hs+='visibility : inherit;';
+		hs+='visibility : hidden;';
 		hs+='width : 90%;';
 		hs+='pointer-events:none;';
 		el.setAttribute('style',hs);
@@ -4092,8 +4092,8 @@ function pano2vrSkin(player,base) {
 					me._thumbnail_menu_mobile.ggVisible=true;
 				}
 				else {
-					me._thumbnail_menu_mobile.style.visibility=(Number(me._thumbnail_menu_mobile.style.opacity)>0||!me._thumbnail_menu_mobile.style.opacity)?'inherit':'hidden';
-					me._thumbnail_menu_mobile.ggVisible=true;
+					me._thumbnail_menu_mobile.style.visibility="hidden";
+					me._thumbnail_menu_mobile.ggVisible=false;
 				}
 			}
 		}
