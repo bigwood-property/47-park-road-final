@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.0.1/17227
 // Filename: bigwood_v1.ggsk
-// Generated Thu May 7 08:28:20 2026
+// Generated Thu May 7 08:53:37 2026
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_hotspot_preview', 2, true);
@@ -17,6 +17,7 @@ function pano2vrSkin(player,base) {
 	player.addVariable('opt_loader_mulires', 2, true);
 	player.addVariable('opt_url', 2, false);
 	player.addVariable('opt_autohide', 2, false);
+	player.addVariable('opt_floorplan', 2, true);
 	player.addVariable('vis_userdata', 2, false);
 	player.addVariable('vis_close_buton', 2, false);
 	player.addVariable('vis_image_popup', 2, false);
@@ -720,6 +721,18 @@ function pano2vrSkin(player,base) {
 			{
 				newLogicStateSize = 6;
 			}
+			else if (
+				(player.getVariableValue('pos_controller') == 8)
+			)
+			{
+				newLogicStateSize = 7;
+			}
+			else if (
+				(player.getVariableValue('pos_controller') == 9)
+			)
+			{
+				newLogicStateSize = 8;
+			}
 			else {
 				newLogicStateSize = -1;
 			}
@@ -758,6 +771,16 @@ function pano2vrSkin(player,base) {
 				}
 				else if (me._controller_bg.ggCurrentLogicStateSize == 6) {
 					me._controller_bg.style.width='274px';
+					me._controller_bg.style.height='50px';
+					skin.updateSize(me._controller_bg);
+				}
+				else if (me._controller_bg.ggCurrentLogicStateSize == 7) {
+					me._controller_bg.style.width='306px';
+					me._controller_bg.style.height='50px';
+					skin.updateSize(me._controller_bg);
+				}
+				else if (me._controller_bg.ggCurrentLogicStateSize == 8) {
+					me._controller_bg.style.width='338px';
 					me._controller_bg.style.height='50px';
 					skin.updateSize(me._controller_bg);
 				}
@@ -1712,6 +1735,30 @@ function pano2vrSkin(player,base) {
 				return this.parentNode.ggElementNodeId();
 			}
 			return player.getCurrentNode();
+		}
+		me._floorplan_button.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				(player.getVariableValue('opt_floorplan') == 0)
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._floorplan_button.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._floorplan_button.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._floorplan_button.style[domTransition]='';
+				if (me._floorplan_button.ggCurrentLogicStateVisible == 0) {
+					me._floorplan_button.style.visibility=(Number(me._floorplan_button.style.opacity)>0||!me._floorplan_button.style.opacity)?'inherit':'hidden';
+					me._floorplan_button.ggVisible=true;
+				}
+				else {
+					me._floorplan_button.style.visibility=(Number(me._floorplan_button.style.opacity)>0||!me._floorplan_button.style.opacity)?'inherit':'hidden';
+					me._floorplan_button.ggVisible=true;
+				}
+			}
 		}
 		me._floorplan_button.onclick=function (e) {
 			player.setVariableValue('vis_floorplan', !player.getVariableValue('vis_floorplan'));
@@ -8469,6 +8516,13 @@ function pano2vrSkin(player,base) {
 			}
 			if (
 				(
+					(player.getVariableValue('opt_floorplan') == true)
+				)
+			) {
+				player.setVariableValue('pos_controller', player.getVariableValue('pos_controller') + Number("1"));
+			}
+			if (
+				(
 					(player.getVariableValue('opt_zoom') == true) && 
 					(player.getOS() != 4)
 				)
@@ -13946,6 +14000,7 @@ function pano2vrSkin(player,base) {
 	me._gyro.logicBlock_visible();
 	me._gyro_on.logicBlock_alpha();
 	me._gyro_off.logicBlock_alpha();
+	me._floorplan_button.logicBlock_visible();
 	me._projection_buttons.logicBlock_position();
 	me._projection_buttons.logicBlock_visible();
 	me._thumbnail.logicBlock_position();
@@ -13991,7 +14046,7 @@ function pano2vrSkin(player,base) {
 	player.addListener('tilesrequested', function(args) { me._loading_multires.logicBlock_visible(); });
 	player.addListener('fullscreenenter', function(args) { me._fullscreen.logicBlock_alpha();me._fullscreen_off.logicBlock_alpha(); });
 	player.addListener('fullscreenexit', function(args) { me._fullscreen.logicBlock_alpha();me._fullscreen_off.logicBlock_alpha(); });
-	player.addListener('changenodeid', function(args) { me._menu_button.logicBlock_position();me._loading_multires.logicBlock_visible();me._screentint.logicBlock_alpha();me._controller.logicBlock_position();me._controller.logicBlock_alpha();me._controller_bg.logicBlock_position();me._controller_bg.logicBlock_size();me._controller_bg.logicBlock_visible();me._controller_slider.logicBlock_position();me._fullscreen_buttons.logicBlock_position();me._fullscreen_buttons.logicBlock_visible();me._gyro.logicBlock_position();me._gyro.logicBlock_visible();me._gyro_on.logicBlock_alpha();me._gyro_off.logicBlock_alpha();me._projection_buttons.logicBlock_position();me._projection_buttons.logicBlock_visible();me._thumbnail.logicBlock_position();me._thumbnail.logicBlock_visible();me._thumbnail_hide_button_show.logicBlock_alpha();me._thumbnail_show_button_show.logicBlock_alpha();me._info.logicBlock_position();me._info.logicBlock_visible();me._autorotate_buttons.logicBlock_position();me._autorotate_buttons.logicBlock_visible();me._autorotate_start.logicBlock_alpha();me._autorotate_stop.logicBlock_alpha();me._zoomout.logicBlock_visible();me._zoomin.logicBlock_visible();me._thumbnail_menu.logicBlock_position();me._thumbnail_menu.logicBlock_visible();me._thumbnail_menu.logicBlock_alpha();me._thumbnail_menu_mobile.logicBlock_position();me._thumbnail_menu_mobile.logicBlock_visible();me._thumbnail_menu_mobile.logicBlock_alpha();me._web_page.logicBlock_visible();me._userdata.logicBlock_visible();me._information.logicBlock_visible();me._image_popup.logicBlock_visible();me._popup_image.logicBlock_visible();me._video_popup_file.logicBlock_visible();me._popup_video_file.logicBlock_visible();me._video_popup_controls_file.logicBlock_visible();me._video_popup_url.logicBlock_visible();me._popup_video_url.logicBlock_visible();me._video_popup_controls_url.logicBlock_visible();me._video_popup_vimeo.logicBlock_visible();me._popup_video_vimeo.logicBlock_visible();me._video_popup_youtube.logicBlock_visible();me._popup_video_youtube.logicBlock_visible();me.__360image_gyro.logicBlock_visible();me.__360image.logicBlock_position();me.__360image.logicBlock_scaling();me._phone2.logicBlock_scaling();me._phone3.logicBlock_scaling();me._close.logicBlock_visible();me._loading.logicBlock_visible();me._floorplan_container.logicBlock_visible(); });
+	player.addListener('changenodeid', function(args) { me._menu_button.logicBlock_position();me._loading_multires.logicBlock_visible();me._screentint.logicBlock_alpha();me._controller.logicBlock_position();me._controller.logicBlock_alpha();me._controller_bg.logicBlock_position();me._controller_bg.logicBlock_size();me._controller_bg.logicBlock_visible();me._controller_slider.logicBlock_position();me._fullscreen_buttons.logicBlock_position();me._fullscreen_buttons.logicBlock_visible();me._gyro.logicBlock_position();me._gyro.logicBlock_visible();me._gyro_on.logicBlock_alpha();me._gyro_off.logicBlock_alpha();me._floorplan_button.logicBlock_visible();me._projection_buttons.logicBlock_position();me._projection_buttons.logicBlock_visible();me._thumbnail.logicBlock_position();me._thumbnail.logicBlock_visible();me._thumbnail_hide_button_show.logicBlock_alpha();me._thumbnail_show_button_show.logicBlock_alpha();me._info.logicBlock_position();me._info.logicBlock_visible();me._autorotate_buttons.logicBlock_position();me._autorotate_buttons.logicBlock_visible();me._autorotate_start.logicBlock_alpha();me._autorotate_stop.logicBlock_alpha();me._zoomout.logicBlock_visible();me._zoomin.logicBlock_visible();me._thumbnail_menu.logicBlock_position();me._thumbnail_menu.logicBlock_visible();me._thumbnail_menu.logicBlock_alpha();me._thumbnail_menu_mobile.logicBlock_position();me._thumbnail_menu_mobile.logicBlock_visible();me._thumbnail_menu_mobile.logicBlock_alpha();me._web_page.logicBlock_visible();me._userdata.logicBlock_visible();me._information.logicBlock_visible();me._image_popup.logicBlock_visible();me._popup_image.logicBlock_visible();me._video_popup_file.logicBlock_visible();me._popup_video_file.logicBlock_visible();me._video_popup_controls_file.logicBlock_visible();me._video_popup_url.logicBlock_visible();me._popup_video_url.logicBlock_visible();me._video_popup_controls_url.logicBlock_visible();me._video_popup_vimeo.logicBlock_visible();me._popup_video_vimeo.logicBlock_visible();me._video_popup_youtube.logicBlock_visible();me._popup_video_youtube.logicBlock_visible();me.__360image_gyro.logicBlock_visible();me.__360image.logicBlock_position();me.__360image.logicBlock_scaling();me._phone2.logicBlock_scaling();me._phone3.logicBlock_scaling();me._close.logicBlock_visible();me._loading.logicBlock_visible();me._floorplan_container.logicBlock_visible(); });
 	player.addListener('configloaded', function(args) { me._fullscreen_buttons.logicBlock_visible();me._gyro.logicBlock_visible();me._thumbnail.logicBlock_visible();me._thumbnail_menu.logicBlock_visible();me._thumbnail_menu_mobile.logicBlock_visible();me.__360image_gyro.logicBlock_visible(); });
 	player.addListener('projectionchanged', function(args) { me._rectilinear.logicBlock_alpha();me._fisheye.logicBlock_alpha();me._stereographic.logicBlock_alpha(); });
 	player.addListener('autorotatechanged', function(args) { me._autorotate_start.logicBlock_alpha();me._autorotate_stop.logicBlock_alpha(); });
@@ -14019,6 +14074,7 @@ function pano2vrSkin(player,base) {
 	player.addListener('varchanged_pos_fullscreen', function(args) { me._fullscreen_buttons.logicBlock_position(); });
 	player.addListener('varchanged_opt_fullscreen', function(args) { me._fullscreen_buttons.logicBlock_visible(); });
 	player.addListener('varchanged_pos_gyro', function(args) { me._gyro.logicBlock_position(); });
+	player.addListener('varchanged_opt_floorplan', function(args) { me._floorplan_button.logicBlock_visible(); });
 	player.addListener('varchanged_opt_projection', function(args) { me._projection_buttons.logicBlock_visible(); });
 	player.addListener('varchanged_pos_projection', function(args) { me._projection_buttons.logicBlock_position(); });
 	player.addListener('varchanged_pos_thumbnail', function(args) { me._thumbnail.logicBlock_position(); });
