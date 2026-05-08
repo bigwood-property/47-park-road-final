@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.0.1/17227
 // Filename: bigwood_v1.ggsk
-// Generated Fri May 8 06:20:16 2026
+// Generated Fri May 8 06:25:00 2026
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_hotspot_preview', 2, true);
@@ -3838,12 +3838,12 @@ function pano2vrSkin(player,base) {
 		el.ggContentLeftOffset = 0;
 		el.ggContentTopOffset = 0;
 		hs ='';
-		hs+='height : 488px;';
+		hs+='height : 85px;';
 		hs+='left : 0px;';
 		hs+='overflow : visible;';
 		hs+='position : absolute;';
 		hs+='top : 0px;';
-		hs+='width : 127px;';
+		hs+='width : 130px;';
 		hs+="";
 		els.setAttribute('style',hs);
 		me._thumbnail_menu_mobile.ggScrollByX = function(diffX) {
@@ -4210,7 +4210,7 @@ function pano2vrSkin(player,base) {
 		el=me._thumbnail_cloner_mobile=document.createElement('div');
 		el.ggNumRepeat = 1;
 		el.ggWidth = 128;
-		el.ggHeight = 489;
+		el.ggHeight = 86;
 		el.ggUpdating = false;
 		el.ggFilter = [];
 		el.ggInstances = [];
@@ -4344,7 +4344,7 @@ function pano2vrSkin(player,base) {
 		el.className="ggskin ggskin_cloner ";
 		el.ggType='cloner';
 		hs ='';
-		hs+='height : 489px;';
+		hs+='height : 86px;';
 		hs+='left : 0px;';
 		hs+='overflow : visible;';
 		hs+='position : absolute;';
@@ -13687,7 +13687,7 @@ function pano2vrSkin(player,base) {
 		me.elementMouseDown={};
 		me.elementMouseOver={};
 		me.__div=document.createElement('div');
-		me.__div.setAttribute('style','position: absolute;width: 128px; height: 489px; visibility: inherit; overflow: visible;');
+		me.__div.setAttribute('style','position: absolute;width: 128px; height: 86px; visibility: inherit; overflow: visible;');
 		me.__div.style.left=parameter.left;
 		me.__div.style.top=parameter.top;
 		me.__div.ggIsActive = function() {
@@ -13698,8 +13698,8 @@ function pano2vrSkin(player,base) {
 		}
 		el=me._thumbnail_active_mobile=document.createElement('div');
 		el.ggId="thumbnail_active_mobile";
-		el.ggDx=1;
-		el.ggDy=-198;
+		el.ggDx=4;
+		el.ggDy=4;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_rectangle ";
@@ -13975,7 +13975,7 @@ function pano2vrSkin(player,base) {
 		el.ggSubElement = els;
 		el.ggId="thumbnail_nodeImage_mobile";
 		el.ggDx=1;
-		el.ggDy=-198;
+		el.ggDy=2;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_nodeimage ";
