@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.0.1/17227
 // Filename: bigwood_v1.ggsk
-// Generated Fri May 8 07:00:23 2026
+// Generated Fri May 8 07:04:30 2026
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_hotspot_preview', 2, true);
@@ -3843,7 +3843,7 @@ function pano2vrSkin(player,base) {
 		hs+='overflow : visible;';
 		hs+='position : absolute;';
 		hs+='top : 0px;';
-		hs+='width : 127px;';
+		hs+='width : 126px;';
 		hs+="";
 		els.setAttribute('style',hs);
 		me._thumbnail_menu_mobile.ggScrollByX = function(diffX) {
@@ -4035,7 +4035,7 @@ function pano2vrSkin(player,base) {
 		hs+='position : absolute;';
 		hs+='top : -10000px;';
 		hs+='visibility : hidden;';
-		hs+='width : 147px;';
+		hs+='width : 154px;';
 		hs+='pointer-events:none;';
 		el.setAttribute('style',hs);
 		el.style[domTransform + 'Origin']='50% 50%';
@@ -4209,7 +4209,7 @@ function pano2vrSkin(player,base) {
 		}
 		el=me._thumbnail_cloner_mobile=document.createElement('div');
 		el.ggNumRepeat = 1;
-		el.ggWidth = 128;
+		el.ggWidth = 127;
 		el.ggHeight = 86;
 		el.ggUpdating = false;
 		el.ggFilter = [];
@@ -4350,7 +4350,7 @@ function pano2vrSkin(player,base) {
 		hs+='position : absolute;';
 		hs+='top : 0px;';
 		hs+='visibility : inherit;';
-		hs+='width : 128px;';
+		hs+='width : 127px;';
 		hs+='pointer-events:none;';
 		el.setAttribute('style',hs);
 		el.style[domTransform + 'Origin']='50% 50%';
@@ -13687,7 +13687,7 @@ function pano2vrSkin(player,base) {
 		me.elementMouseDown={};
 		me.elementMouseOver={};
 		me.__div=document.createElement('div');
-		me.__div.setAttribute('style','position: absolute;width: 128px; height: 86px; visibility: inherit; overflow: visible;');
+		me.__div.setAttribute('style','position: absolute;width: 127px; height: 86px; visibility: inherit; overflow: visible;');
 		me.__div.style.left=parameter.left;
 		me.__div.style.top=parameter.top;
 		me.__div.ggIsActive = function() {
@@ -13698,8 +13698,8 @@ function pano2vrSkin(player,base) {
 		}
 		el=me._thumbnail_active_mobile=document.createElement('div');
 		el.ggId="thumbnail_active_mobile";
-		el.ggDx=-1;
-		el.ggDy=-2;
+		el.ggDx=0;
+		el.ggDy=1;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_rectangle ";
@@ -13805,8 +13805,8 @@ function pano2vrSkin(player,base) {
 		el.appendChild(els);
 		el.ggSubElement = els;
 		el.ggId="thumbnail_nodeImage_mobile";
-		el.ggDx=2;
-		el.ggDy=3;
+		el.ggDx=0;
+		el.ggDy=1;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_nodeimage ";
@@ -13924,7 +13924,7 @@ function pano2vrSkin(player,base) {
 		el.ggType='text';
 		hs ='';
 		hs+='cursor : pointer;';
-		hs+='height : 18px;';
+		hs+='height : 36px;';
 		hs+='left : -10000px;';
 		hs+='opacity : 0;';
 		hs+='position : absolute;';
@@ -13939,9 +13939,7 @@ function pano2vrSkin(player,base) {
 		hs+='left: 0px;';
 		hs+='top:  0px;';
 		hs+='width: 85px;';
-		hs+='height: 18px;';
-		hs+='background: #000000;';
-		hs+='background: rgba(0,0,0,0.588235);';
+		hs+='height: 36px;';
 		hs+='border: 0px solid #000000;';
 		hs+='color: rgba(255,255,255,1);';
 		hs+='text-align: center;';
